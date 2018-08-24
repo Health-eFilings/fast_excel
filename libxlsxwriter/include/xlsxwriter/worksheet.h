@@ -59,7 +59,7 @@
 #define LXW_COL_MAX 16384
 #define LXW_COL_META_MAX 128
 #define LXW_HEADER_FOOTER_MAX 255
-#define LXW_MAX_NUMBER_URLS 65530
+#define LXW_MAX_NUMBER_URLS 4294967290
 #define LXW_PANE_NAME_LENGTH 12 /* bottomRight + 1 */
 
 /* The Excel 2007 specification says that the maximum number of page
@@ -686,7 +686,7 @@ typedef struct lxw_worksheet {
     uint16_t fit_height;
     uint16_t fit_width;
     uint16_t horizontal_dpi;
-    uint16_t hlink_count;
+    uint32_t hlink_count;
     uint16_t page_start;
     uint16_t print_scale;
     uint16_t rel_count;
